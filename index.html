@@ -3,213 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vlavla11</title>
+    <title>nigger/title>
     <style>
-        /* Basic reset for margins and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Full page background */
+        /* Make the body full height and set the background to black */
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-            font-family: Arial, sans-serif;
-            overflow: hidden; /* Prevent scroll */
+            height: 100vh;  /* Make the body take full height of the viewport */
+            background-color: black; /* Full black background */
+            color: white;  /* Set text color to white for contrast */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            font-family: Arial, sans-serif; /* Choose a font */
         }
 
-        /* Star field container */
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none; /* Prevent interaction with stars */
-        }
-
-        /* Style for individual stars */
-        .star {
-            position: absolute;
-            background: white;
-            clip-path: polygon(50% 0%, 61.8% 35%, 98% 35%, 68.2% 57%, 79.1% 91%, 50% 70%, 20.9% 91%, 31.8% 57%, 2% 35%, 38.2% 35%);
-            opacity: 0.9;
-            pointer-events: none;
-            transition: top linear;
-        }
-
-        /* Container for the profile and text (hidden initially) */
-        .container {
-            text-align: center;
-            z-index: 1; /* Ensure the container is above stars */
-            display: none; /* Initially hidden */
-        }
-
-        /* Custom text styling */
-        .custom-text {
-            color: white;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
-            margin: 15px 0;
-            font-size: 18px;
-        }
-
-        /* Profile picture container */
-        .profile-picture {
-            width: 150px;
-            height: 150px;
-            background-color: white; /* Fallback color */
-            border-radius: 50%;
-            background-image: url('belle.png'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-            margin: 0 auto; /* Ensure it's centered */
-        }
-
-        /* Name styling */
-        .name {
-            color: white;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
-            margin: 15px 0;
-        }
-
-        /* Icons container */
-        .icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        /* Icon style */
-        .icon {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-
-        .icon:hover {
-            transform: scale(1.2);
-        }
-
-        /* Overlay for click-to-enter */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 2; /* Above everything else */
-        }
-
-        /* Hide the overlay after click */
-        .overlay.hidden {
-            display: none;
+        /* Optional: Style the text */
+        h1 {
+            font-size: 2rem; /* Adjust the font size */
+            text-align: center; /* Center text horizontally (this is default for block-level elements) */
         }
     </style>
 </head>
 <body>
 
-    <!-- Overlay for click-to-enter -->
-    <div class="overlay" id="overlay">
-        <span>Click to Enter</span>
-    </div>
+    <h1>
 
-    <!-- Container for profile and icons (hidden initially) -->
-    <div class="container" id="main-container">
-        <div class="isis.jpg"></div>
-        <div class="name">tailz</div>
-        <div class="custom-text">hi niggaz</div>
-        <div class="icons">
-            <a href="#" class="icon">🌍</a>
-            <a href="#" class="icon">💬</a>
-            <a href="#" class="icon">📧</a>
-        </div>
-    </div>
+          
+                           AL-MFJ
+        
+        
+         tailz 
+        pebe
+        kabanos
+        diler
+        misio
 
-    <!-- Star field -->
-    <div class="stars" id="stars"></div>
 
-    <!-- Audio player (auto-play) -->
-    <audio id="background-audio" autoplay loop>
-        <source src="swatted.mp4" type="audio/mpeg"> <!-- Replace with your audio file -->
-        Your browser does not support the audio element.
-    </audio>
 
-    <script>
-        // Select elements
-        const overlay = document.getElementById('overlay');
-        const mainContainer = document.getElementById('main-container');
-        const starsContainer = document.getElementById('stars');
-        const backgroundAudio = document.getElementById('background-audio');
 
-        // Hide the overlay and show the main content when clicked
-        overlay.addEventListener('click', () => {
-            overlay.classList.add('hidden');
-            mainContainer.style.display = 'block'; // Show the main container
-        });
 
-        // Function to create a star
-        function createStar(x, y) {
-            const star = document.createElement('div');
-            const size = Math.random() * 5 + 5; // Random size between 5px and 10px
-            const leftPosition = x;
-            const animationDuration = Math.random() * 3 + 2; // Fall time between 2s and 5s
 
-            star.classList.add('star');
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            star.style.left = `${leftPosition}px`;
-            star.style.top = `-${size}px`; // Start above the view
-
-            // Animation for the falling effect
-            star.style.transition = `top ${animationDuration}s linear`;
-
-            // Append star to the star field
-            starsContainer.appendChild(star);
-
-            // Trigger the falling effect after a slight delay
-            setTimeout(() => {
-                star.style.top = `${window.innerHeight}px`; // Fall to the bottom
-            }, 100);
-
-            // Remove star after animation to avoid DOM bloat
-            star.addEventListener('transitionend', () => {
-                starsContainer.removeChild(star);
-            });
-        }
-
-        // Create stars at intervals
-        setInterval(() => {
-            createStar(Math.random() * window.innerWidth, 0); // Use random x position for the interval stars
-        }, 500);
-
-        // Create stars on click
-        document.body.addEventListener('click', (event) => {
-            createStar(event.clientX, event.clientY); // Use click position for the new stars
-        });
-
-        // Initial stars creation
-        for (let i = 0; i < 50; i++) {
-            createStar(Math.random() * window.innerWidth, 0); // Initial random stars
-        }
-    </script>
+        
+    </h1>
 
 </body>
 </html>
